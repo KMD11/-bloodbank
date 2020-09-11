@@ -238,13 +238,8 @@ public class StaffRegistration {
 					txtPassword.selectAll();
 				}
 				
-				else if(CheckingOfJava.IsEmail(txtEmail.getText()))
-				{
-					JOptionPane.showMessageDialog(null, "Wrong Email Address");
-					txtEmail.requestFocus();
-					txtEmail.selectAll();
-				}
-				else if(!(txtPassword.getPassword().equals(txtCon_Pass.getPassword())))
+				
+				else if(!(txtPassword.getText().equals(txtCon_Pass.getText())))
 				{
 					JOptionPane.showMessageDialog(null, "Your passwords do not match!");
 					txtCon_Pass.requestFocus();
@@ -285,6 +280,7 @@ public class StaffRegistration {
 							txtPhNo.setText("");
 							txtRoll.setText("");
 							txtName.requestFocus();
+							AutoID();
 						}
 						else
 						{
